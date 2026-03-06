@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion à iParadise</title>
+    <link rel="stylesheet" href="connection.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <div class="login-container">
+        
+        <div class="login-card">
+            
+            <div class="header-login">
+                <i class="fab fa-apple logo-icon"></i> 
+                <h1 class="login-title">Connexion à iParadise</h1>
+                <p class="login-subtitle">Accédez à votre compte client pour gérer vos commandes et échanges.</p>
+            </div>
+
+            <form id="loginForm" class="login-form"> 
+                
+                <div class="input-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                    <input type="email" id="email" placeholder="votre.email@exemple.com" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password"><i class="fas fa-lock"></i> Mot de passe</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+
+                <div class="options-row">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Se souvenir de moi</label>
+                    </div>
+                    <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+                </div>
+                
+                <button type="submit" class="login-btn">
+                    Se Connecter <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+           
+            <div class="footer-login">
+                <p>Nouveau client ? <a href="Commander.html" class="register-link">Créer un compte</a></p>
+            </div>
+        </div>
+
+    </div>
+<style>
+    .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #4CAF50; 
+            color: white;
+            text-decoration: none; 
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+</style>
+</body>
+</html>

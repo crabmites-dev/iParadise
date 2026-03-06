@@ -1,0 +1,392 @@
+/* Réinitialisation de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f7f7; /* Fond très clair */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ---------------------------------- */
+/* --- Section Produits Vedettes --- */
+/* ---------------------------------- */
+
+.featured-products-section {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333;
+    
+}
+
+.section-description {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Conteneur de la grille (CSS Grid pour un alignement parfait) */
+.products-grid {
+    display: grid;
+    /* 4 colonnes sur les grands écrans */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+
+
+/* --- Style de la Carte Produit --- */
+.product-card {
+    background-color: #fff;
+    border-radius: 12px;
+    /* Ombre subtile pour le look premium */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.product-image-container {
+    background-color: #f8f8f8; /* Fond gris clair pour l'image */
+    position: relative;
+    padding: 20px;
+    height: 300px; /* Hauteur fixe pour aligner toutes les cartes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.product-image {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+/* --- Badges "Nouveau" et "Réduction" --- */
+.badge {
+    position: absolute;
+    top: 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    z-index: 10;
+}
+
+.badge-new {
+    left: 15px;
+    background-color: #6cbf6e; /* Vert clair pour "Nouveau" */
+}
+
+.badge-discount {
+    right: 15px;
+    background-color: #e84a4a; /* Rouge pour la réduction */
+}
+
+/* --- Détails du Produit --- */
+.product-details {
+    padding: 15px 20px 20px;
+}
+
+.product-category {
+    font-size: 14px;
+    color: #888;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.product-name {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #1c1c1c;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.price-current {
+    font-size: 20px;
+    font-weight: 800;
+    color: #007aff; /* Bleu iParadise pour le prix actuel */
+    margin-right: 10px;
+}
+
+.price-old {
+    font-size: 14px;
+    color: #888;
+    text-decoration: line-through; /* Barré pour l'ancien prix */
+}
+
+
+/* Bouton "Ajouter au panier" (seulement sur la carte complète) */
+.btn-add-to-cart {
+    display: block;
+    width: 100%;
+    background-color: #007aff;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 0;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.btn-add-to-cart:hover {
+    background-color: #0060c4;
+}
+
+/* --- Media Queries (Réactivité) --- */
+@media (max-width: 1200px) {
+    .products-grid {
+        /* 3 colonnes sur les tablettes */
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .products-grid {
+        /* 2 colonnes sur les petits écrans/téléphones larges */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .products-grid {
+        /* 1 colonne sur les téléphones étroits */
+        grid-template-columns: 1fr;
+    }
+    .product-image-container {
+        height: 250px;
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 15px;
+    padding: 0 15px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    text-decoration: none;
+    margin-right: 30px;
+    color: #007bff; 
+}
+
+.icon {
+    font-size: 20px;
+    margin-left: 15px;
+    color: #333;
+    text-decoration: none;
+}
+
+.btn-connexion {
+    background-color: #007bff; /* Bleu pour le bouton Connexion */
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    margin-left: 20px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.iphone-hero-banner-img {
+   /* MODIFICATION CLÉ CI-DESSOUS */
+   height: 100vh; /* Utilise 100% de la hauteur de la fenêtre (Full Screen) */
+   /* OU */
+   /* height: 85vh; */ /* Utilise 85% de la hauteur de la fenêtre */
+   
+   color: #fff;
+   position: relative;
+   
+   /* Centrage du contenu */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   padding: 0 5%;
+   overflow: hidden; 
+}
+
+/* --- Conteneur de l'Image (Positionnement absolu) --- */
+.background-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Place le conteneur derrière le contenu (z-index: 2) */
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Assure que l'image couvre toute la zone */
+    display: block;
+}
+
+/* Le Filtre/Overlay (positionné au-dessus de l'image) */
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Utilisation d'un dégradé noir pour conserver l'ambiance sombre */
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75));
+}
+
+/* --- Contenu de la bannière (Positionnement au premier plan) --- */
+.banner-content-img {
+    max-width: 900px;
+    z-index: 2; /* Place le contenu devant l'image (z-index: 1) */
+}
+
+/* Styles du Titre */
+.main-heading-img {
+    font-family: 'Poppins', sans-serif;
+    font-size: 5.5vw;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+/* Styles du Slogan */
+.tagline-img {
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 40px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Boutons d'action --- */
+.banner-buttons-img {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-img {
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color 0.3s, opacity 0.3s;
+    letter-spacing: 1px;
+}
+
+/* Bouton Noir/Transparent */
+.btn-watch-more-img {
+    background-color: rgba(0, 0, 0, 0.6); 
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 15px;
+}
+
+.btn-watch-more-img:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Bouton Bleu/Cyan */
+.btn-subscribe-img {
+    background: linear-gradient(45deg, #007aff, #00c7ff); 
+    border: 2px solid #007aff;
+    color: #fff;
+    border-radius: 15px;
+}
+
+.btn-subscribe-img:hover {
+    opacity: 0.9;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+/* --- Media Query (Réactivité) --- */
+@media (max-width: 992px) {
+    .iphone-hero-banner-img {
+        height: 60vh;
+    }
+    .main-heading-img {
+        font-size: 8vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .iphone-hero-banner-img {
+        height: 50vh;
+    }
+    .main-heading-img {
+        font-size: 10vw;
+    }
+    .banner-buttons-img {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .btn-img {
+        width: 100%;
+        padding: 12px 0;
+    }
+}

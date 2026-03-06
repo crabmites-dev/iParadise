@@ -1,0 +1,237 @@
+/* Importation de la police Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5; /* Fond très léger */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Aligner en haut pour laisser de la place au scroll si besoin */
+    min-height: 100vh;
+    padding: 40px 20px;
+    color: #333;
+}
+
+/* Carte de paiement centrale */
+.payment-card {
+    width: 100%;
+    max-width: 650px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    border-color: #007aff;
+}
+
+.payment-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.payment-title i {
+    color: #007aff; /* Vert pour symboliser la sécurité */
+    margin-right: 10px;
+}
+
+.payment-subtitle {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* --- Choix des Méthodes (Boutons) --- */
+.payment-methods-selector {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 20px;
+}
+
+.method-btn {
+    flex: 1;
+    background-color: #f9f9f9;
+    color: #555;
+    padding: 15px 10px;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.method-btn:hover {
+    border-color: #ccc;
+}
+
+.method-btn.active {
+    background-color: #007aff;
+    color: #fff;
+    border-color: #007aff;
+    box-shadow: 0 4px 10px rgba(0, 122, 255, 0.2);
+}
+
+.method-btn i, .mobile-money-logo {
+    margin-right: 10px;
+}
+
+.mobile-money-logo {
+    width: 20px; /* Taille pour les logos Wave/OM */
+    height: 20px;
+    object-fit: contain;
+}
+
+.method-btn.active i {
+    color: #fff;
+}
+
+/* --- Formulaires de Paiement Dynamiques --- */
+.payment-forms-container {
+    min-height: 250px; /* Assure que la carte ne s'affaisse pas lors du changement */
+}
+
+.payment-form {
+    display: none; /* Masqué par défaut, affiché via JS */
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.payment-form.active {
+    display: flex;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.payment-form h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #007aff;
+}
+
+.instruction {
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.note-info {
+    font-size: 13px;
+    color: #888;
+    margin-top: 10px;
+}
+
+/* Inputs */
+.input-group {
+    margin-bottom: 5px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .input-group {
+    flex: 1;
+}
+
+/* Bouton Payer */
+.pay-btn {
+    background-color: #007aff;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+}
+
+.pay-btn:hover {
+    background-color: #0060c4;
+}
+
+/* Réactivité */
+@media (max-width: 600px) {
+    .payment-methods-selector {
+        flex-direction: column;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .payment-card {
+        padding: 30px 20px;
+    }
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    
+    /* LIGNE CLÉ MODIFIÉE : Utilise Poppins */
+    font-family: 'Poppins', sans-serif; 
+    
+    transition: border-color 0.3s;
+    color: #333;
+}
+
+#card-number:hover{
+    border-color: #007aff;
+}
+
+#card-number:active{
+    border-color: #007aff;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #007aff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
+}

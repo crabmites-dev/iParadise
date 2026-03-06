@@ -1,0 +1,189 @@
+/* Importation de la police Poppins pour un look moderne */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e9f0f9; /* Fond bleu très doux et clair */
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Conteneur principal */
+.login-container {
+    padding: 20px;
+}
+
+/* Carte de connexion (le formulaire lui-même) */
+.login-card {
+    width: 100%;
+    width: 550px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15); /* Ombre douce et moderne */
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.login-card:hover {
+    transform: translateY(-5px);
+}
+
+/* En-tête */
+.header-login {
+    margin-bottom: 30px;
+}
+
+.logo-icon {
+    font-size: 40px;
+    color: #007aff;
+    margin-bottom: 10px;
+}
+
+.login-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #1a1a1a;
+}
+
+.login-subtitle {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Formulaire */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 14px;
+}
+
+.input-group label i {
+    margin-right: 8px;
+    color: #007aff;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-family: 'Poppins', sans-serif; /* Poppins dans le champ */
+    color: #333;
+}
+
+.input-group input:focus {
+    border-color: #007aff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
+}
+
+/* Ligne d'options (Se souvenir / Oublié) */
+.options-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.remember-me label {
+    font-weight: 400;
+    color: #777;
+    cursor: pointer;
+    display: inline; /* Pour ne pas casser l'alignement */
+    margin-bottom: 0; /* Annule la marge du .input-group */
+}
+
+.remember-me input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.forgot-password {
+    color: #007aff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.forgot-password:hover {
+    color: #0060c4;
+    text-decoration: underline;
+}
+
+/* Bouton de Connexion */
+.login-btn {
+    background-color: #007aff;
+    color: #fff;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3);
+}
+
+.login-btn i {
+    margin-left: 8px;
+}
+
+.login-btn:hover {
+    background-color: #0060c4;
+    transform: translateY(-2px);
+}
+
+/* Pied de carte */
+.footer-login {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #777;
+}
+
+.register-link {
+    color: #007aff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+}
+
+/* Réactivité */
+@media (max-width: 500px) {
+    .login-card {
+        padding: 30px 20px;
+        margin: 20px;
+    }
+    .login-title {
+        font-size: 24px;
+    }
+    .options-row {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+}
+

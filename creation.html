@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer un compte</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="cretion.css"> 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body> 
+
+    <div class="login-container">
+        <i class="fas fa-user-plus icon-large"></i> 
+        
+        <h1>Création de Compte</h1>
+        <p class="subtitle">Créez votre compte client pour accéder à vos services et commandes.</p>
+
+        <form action="inscription_traitement.php" method="post" class="form-body">
+            
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" name="pseudo" placeholder="Votre Pseudo" required>
+            </div>
+            
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" name="email" placeholder="Adresse Email" required>
+            </div>
+            
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="password" placeholder="Mot de passe" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="confirmer" placeholder="Confirmer le mot de passe" required>
+            </div>
+
+            <button type="submit" class="btn-primary">S'inscrire</button>
+        </form>
+        
+        <div class="footer-links">
+            Vous avez déjà un compte ? <a href="connexion.php">Connectez-vous</a>
+        </div>
+    </div>
+
+</body>
+</html>

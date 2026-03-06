@@ -1,0 +1,331 @@
+/* Réinitialisation */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    
+    /* LIGNE CLÉ MODIFIÉE : Utilise Poppins */
+    font-family: 'Poppins', sans-serif; 
+    
+    transition: border-color 0.3s;
+    color: #333;
+}
+
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    color: #1a1a1a;
+    margin-bottom: 50px;
+}
+
+/* --- Bouton Principal (réutilisable) --- */
+.btn-primary-repair {
+    display: inline-block;
+    background-color: #007aff; /* Bleu primaire */
+    color: #fff;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3);
+}
+
+.btn-primary-repair:hover {
+    background-color: #0060c4;
+    transform: translateY(-2px);
+}
+
+/* ---------------------------------- */
+/* SECTION 1 : Bannière d'Introduction */
+/* ---------------------------------- */
+
+.hero-repair-banner {
+    background: linear-gradient(135deg, #e0e0e0, #f5f5f5); /* Léger dégradé gris */
+    padding: 100px 5%;
+    text-align: center;
+    border-bottom: 5px solid #007aff; /* Accent de couleur */
+}
+
+.repair-main-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 52px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+.repair-subtitle {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ---------------------------------- */
+/* SECTION 2 : Processus de Réparation */
+/* ---------------------------------- */
+
+.repair-process-section {
+    padding: 80px 5%;
+    background-color: #fff;
+}
+
+.process-steps {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.step-card {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.step-icon {
+    font-size: 40px;
+    color: #007aff;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+.step-card:hover .step-icon {
+    transform: scale(1.1);
+}
+
+.step-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+.step-card p {
+    color: #666;
+}
+
+/* ---------------------------------- */
+/* SECTION 3 : Services Populaires */
+/* ---------------------------------- */
+
+.service-list-section {
+    padding: 80px 5%;
+    background-color: #f0f2f5;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.service-item:hover {
+    box-shadow: 0 10px 25px rgba(0, 122, 255, 0.15);
+    transform: translateY(-5px);
+}
+
+.service-item i {
+    font-size: 36px;
+    color: #007aff;
+    margin-bottom: 15px;
+}
+
+.service-item h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.service-item p {
+    color: #777;
+    font-size: 15px;
+}
+
+/* ---------------------------------- */
+/* SECTION 4 : Formulaire de Devis */
+/* ---------------------------------- */
+
+.repair-form-section {
+    padding: 80px 5%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.repair-contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row input {
+    flex: 1;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #007aff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
+}
+
+textarea {
+    resize: vertical;
+}
+
+.form-note {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.form-note i {
+    color: #28a745; /* Vert pour la sécurité/garantie */
+    margin-right: 5px;
+}
+
+/* --- Media Queries pour la réactivité --- */
+@media (max-width: 768px) {
+    .repair-main-title {
+        font-size: 40px;
+    }
+    .repair-subtitle {
+        font-size: 18px;
+    }
+    h2 {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+    .process-steps {
+        flex-direction: column;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 15px;
+    padding: 0 15px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    text-decoration: none;
+    margin-right: 30px;
+    color: #007bff; 
+}
+
+.icon {
+    font-size: 20px;
+    margin-left: 15px;
+    color: #333;
+    text-decoration: none;
+}
+
+.btn-connexion {
+    background-color: #007bff; /* Bleu pour le bouton Connexion */
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    margin-left: 20px;
+    border-radius: 10px;
+    font-weight: 600;
+}

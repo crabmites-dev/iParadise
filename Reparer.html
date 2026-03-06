@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service de Réparation iPhone & Apple - iParadise</title>
+    <link rel="stylesheet" href="reparer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-left">
+            <a href="#" class="logo" title="iParadise"><i class="fa-brands fa-apple"></i></a> <nav>
+                <ul>
+                    <li><a href="Boutique.html">Accueil</a></li>
+                    <li><a href="Produit3.html">Produits</a></li>
+                    <li><a href="Echange.html">Échanger</a></li>
+                    <li><a href="Reparer.html">Réparer</a></li> 
+                    <li><a href="Accessoire.html">Accessoires</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="nav-right">
+            <a href="#" class="icon search"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#" class="icon cart"><i class="fa-solid fa-basket-shopping"></i></a>
+            <a href="Connection.html" class="btn-connexion">Connexion</a>
+        </div>
+    </header>
+    
+    <section class="hero-repair-banner">
+        <div class="banner-content">
+            <h1 class="repair-main-title">Votre Appareil, Comme Neuf.</h1>
+            <p class="repair-subtitle">
+                iParadise offre un service de réparation rapide, fiable et garanti pour tous vos appareils Apple.
+            </p>
+            <a href="#repair-form-section" class="btn-primary-repair">Obtenir un Devis Gratuit</a>
+        </div>
+    </section>
+
+    <section class="repair-process-section">
+        <h2>Comment ça marche ?</h2>
+        <div class="process-steps">
+            <div class="step-card">
+                <i class="fas fa-check-circle step-icon"></i>
+                <h3>1. Devis en Ligne</h3>
+                <p>Décrivez votre problème via notre formulaire. Nous vous répondons avec une estimation précise en moins de 2 heures.</p>
+            </div>
+            <div class="step-card">
+                <i class="fas fa-shipping-fast step-icon"></i>
+                <h3>2. Dépôt ou Envoi</h3>
+                <p>Déposez votre appareil en boutique ou utilisez notre service d'enlèvement sécurisé à votre domicile.</p>
+            </div>
+            <div class="step-card">
+                <i class="fas fa-tools step-icon"></i>
+                <h3>3. Réparation & Garantie</h3>
+                <p>Nos techniciens certifiés effectuent la réparation. Vous récupérez votre appareil avec une garantie complète.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-list-section">
+        <h2>Nos Services Populaires</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <i class="fas fa-desktop"></i>
+                <h4>Remplacement d'Écran</h4>
+                <p>Écrans d'origine ou de qualité supérieure, remplacés en moins de 60 minutes.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-battery-half"></i>
+                <h4>Batterie Express</h4>
+                <p>Redonnez vie à votre iPhone avec une nouvelle batterie haute performance.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-water"></i>
+                <h4>Désoxydation</h4>
+                <p>Intervention d'urgence après un dégât des eaux (sous réserve de succès).</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-camera"></i>
+                <h4>Caméra & Objectifs</h4>
+                <p>Réparation des problèmes d'autofocus, de lentilles fissurées ou de caméras arrière.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="repair-form-section" class="repair-form-section">
+        <h2>Demander un Devis de Réparation</h2>
+        <form class="repair-contact-form">
+            <div class="form-row">
+                <input type="text" placeholder="Votre Nom Complet" spellcheck="false" required>
+                <input type="email" placeholder="Votre Email" spellcheck="false" required>
+            </div>
+            <div class="form-row">
+                <input type="text" placeholder="Modèle d'Appareil (Ex: iPhone 14 Pro Max)" spellcheck="false" required>
+                <input type="tel" placeholder="Votre Numéro de Téléphone" spellcheck="false" required>
+            </div>
+            <textarea placeholder="Décrivez le problème le plus précisément possible (Ex: L'écran tactile ne répond plus sur le côté droit)." rows="5" spellcheck="false" required></textarea>
+            
+            <button type="submit" class="btn-primary-repair">Envoyer ma Demande de Devis</button>
+            <p class="form-note">
+                <i class="fas fa-shield-alt"></i> Réponse et devis sous 2 heures ouvrées. Aucune obligation.
+            </p>
+        </form>
+    </section>
+
+</body>
+</html>

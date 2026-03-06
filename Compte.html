@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion | iParadise</title>
+    <link rel="stylesheet" href="compte.css"> 
+    <link rel="stylesheet" href="styles-register.css"> <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="nav-logo">iParadise</a>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="products-main.html">Produits</a>
+            <a href="echange.html">Échanger</a>
+            <a href="reparer.html">Réparer</a>
+            <a href="accessoires.html">Accessoires</a>
+            <a href="a-propos.html">À Propos</a>
+        </nav>
+        <div class="nav-actions">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-shopping-basket"></i>
+            <button class="btn-connexion active">Connexion</button> 
+        </div>
+    </header>
+
+    <main class="auth-page">
+        <div class="register-container">
+            <div class="form-header">
+                <h2>Connexion à iParadise</h2>
+                <p>Accédez à votre compte client pour gérer vos commandes et échanges.</p>
+            </div>
+            
+            <form action="login-process.php" method="POST" class="register-form">
+                
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope icon-label"></i> Email</label>
+                    <div class="input-icon-group">
+                        <input type="email" id="email" name="email" placeholder="votre.email@exemple.com" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password"><i class="fas fa-lock icon-label"></i> Mot de passe</label>
+                    <div class="input-icon-group">
+                        <input type="password" id="password" name="password" placeholder="********" required>
+                    </div>
+                </div>
+                
+                <div class="form-options">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember">Se souvenir de moi</label>
+                    </div>
+                    <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+                </div>
+                
+                <button type="submit" class="btn-submit">
+                    Se Connecter <i class="fas fa-arrow-right"></i>
+                </button>
+                
+                <div class="login-link">
+                    <p>Nouveau client ? <a href="creation.html">Créer un compte</a>.</p>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 iParadise. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>

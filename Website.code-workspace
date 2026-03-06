@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "../Website"
+		},
+		{
+			"path": "../Login form2"
+		},
+		{
+			"path": "../website 2"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../Website 1"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "website3",
+		"liveServer.settings.port": 5501
+	}
+}

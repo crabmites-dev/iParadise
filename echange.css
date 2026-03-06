@@ -1,0 +1,302 @@
+/* Réinitialisation de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Police claire et moderne */
+    background-color: #f0f2f5; /* Fond très clair et doux */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ---------------------------------- */
+/* --- Section d'Échange V2 --- */
+/* ---------------------------------- */
+
+.trade-in-section-v2 {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 0 20px; /* Padding latéral pour la réactivité */
+    text-align: center;
+}
+
+.submit-btn-v2{
+    background-color: #007aff; 
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    /* Aligné à gauche comme le style de l'image source */
+     align-items: center;
+     width: fit-content;
+     
+}
+
+.call-to-action-btn{
+    background-color: #007aff; 
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s; 
+}
+
+.call-to-action-btn{
+    opacity: 0.9;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+.submit-btn-v2{
+    background-color: #007aff;
+}
+
+.header-content {
+    margin-bottom: 50px;
+}
+
+.main-title-v2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+.section-subtitle-v2 {
+    font-size: 19px;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* --- Formulaire --- */
+.trade-in-form-v2 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Style des cartes de questions */
+.form-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    text-align: left;
+    transition: transform 0.2s ease-in-out;
+}
+
+.form-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.card-title i {
+    color: #007aff; /* Icônes en bleu iParadise */
+    margin-right: 12px;
+    font-size: 28px;
+}
+
+.card-description {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+/* Style des grilles d'options (état esthétique, batterie) */
+.option-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.option-grid input[type="radio"] {
+    display: none; /* Cache le radio button par défaut */
+}
+
+.option-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    transition: all 0.2s ease-in-out;
+    font-size: 15px;
+    font-weight: 600;
+    color: #555;
+    min-height: 100px;
+}
+
+.option-label i {
+    font-size: 32px;
+    color: #b0b0b0;
+    margin-bottom: 10px;
+    transition: color 0.2s ease-in-out;
+}
+
+.option-label span {
+    font-size: 13px;
+    font-weight: 400;
+    color: #888;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.option-grid input[type="radio"]:checked + .option-label {
+    background-color: #e6f0ff; /* Fond bleu clair */
+    border-color: #007aff; /* Bordure bleue */
+    color: #007aff; /* Texte bleu */
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15);
+}
+
+.option-grid input[type="radio"]:checked + .option-label i {
+    color: #007aff; /* Icône bleue */
+}
+
+/* Style spécifique pour les options de dommages (Oui/Non/Changé) */
+.damage-options {
+    display: grid;
+    /* Conserve la disposition en grille, mais augmente l'écart */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    
+    /* LIGNE CLÉ : Augmente l'espacement entre les colonnes de la grille */
+    gap: 30px; /* Augmenté de 15px à 30px, par exemple */ 
+}
+
+.radio-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.radio-toggle input[type="radio"] {
+    display: none;
+}
+
+.radio-toggle label {
+    display: inline-block;
+    padding: 12px 25px;
+    border: 2px solid #e0e0e0;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #555;
+    background-color: #f9f9f9;
+    transition: all 0.2s ease-in-out;
+    min-width: 150px; 
+    text-align: center;
+    
+    /* LIGNE CLÉ : Ajoute un petit espace entre les labels Oui/Non */
+    margin: 0 5px; 
+    
+}
+
+.radio-toggle input[type="radio"]:checked + label {
+    background-color: #007aff;
+    color: #fff;
+    border-color: #007aff;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15);
+}
+
+
+/* Style des selects */
+select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #fcfcfc;
+    transition: border-color 0.3s;
+    appearance: none; 
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23007AFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 15px;
+    padding: 0 15px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    text-decoration: none;
+    margin-right: 30px;
+    color: #007bff; 
+}
+
+.icon {
+    font-size: 20px;
+    margin-left: 15px;
+    color: #333;
+    text-decoration: none;
+}
+
+.btn-connexion {
+    background-color: #007bff; /* Bleu pour le bouton Connexion */
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    margin-left: 20px;
+    border-radius: 10px;
+    font-weight: 600;
+}

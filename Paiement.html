@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paiement Sécurisé - iParadise</title>
+    <link rel="stylesheet" href="piement.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <div class="payment-container">
+        <div class="payment-card">
+            
+            <h1 class="payment-title"><i class="fas fa-lock"></i> Paiement Sécurisé</h1>
+            <p class="payment-subtitle">Veuillez choisir votre mode de paiement pour finaliser votre commande.</p>
+
+            <div class="payment-methods-selector">
+                <button class="method-btn active" data-method="card">
+                    <i class="fas fa-credit-card"></i> Carte Bancaire
+                </button>
+                
+            </div>
+
+            <div class="payment-forms-container">
+
+                <form id="card-form" class="payment-form active">
+                    <h2>Détails de la Carte Bancaire</h2>
+                    <div class="input-group">
+                        <label for="card-number">Numéro de Carte</label>
+                        <input type="text" id="card-number" placeholder="XXXX XXXX XXXX XXXX" maxlength="16" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="input-group expiry">
+                            <label for="expiry-date">Date d'Expiration (MM/AA)</label>
+                            <input type="text" id="expiry-date" placeholder="MM/AA" maxlength="5" required>
+                        </div>
+                        <div class="input-group cvc">
+                            <label for="cvc">CVC</label>
+                            <input type="text" id="cvc" placeholder="XXX" maxlength="4" required>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="card-name">Nom sur la Carte</label>
+                        <input type="text" id="card-name" placeholder="" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="card-name">Montant à payer</label>
+                        <input type="text" id="card-name" placeholder="" required>
+                    </div>
+
+                    <button type="submit" class="pay-btn">Payer</button>
+                </form>
+
+                
+</body>
+</html>

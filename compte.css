@@ -1,0 +1,47 @@
+/* --- Styles Spécifiques à la Connexion et Options --- */
+
+/* Ajuster l'icône dans le label (si on suit le style de la référence) */
+.icon-label {
+    margin-right: 5px;
+    color: var(--apple-blue); /* Mettre l'icône en bleu */
+}
+
+.input-icon-group input {
+    /* Retirer l'icône dans le champ de saisie pour cette page pour suivre le style de la référence image_1c6869.png */
+    padding-left: 15px;
+}
+
+/* Grouper les options (Se souvenir de moi / Mot de passe oublié) */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group input {
+    margin-right: 8px;
+    /* Ajuster le style de la checkbox si nécessaire pour qu'elle soit plus jolie */
+}
+
+.forgot-password {
+    color: var(--apple-blue);
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.forgot-password:hover {
+    opacity: 0.8;
+}
+
+/* Le lien en bas pour "Créer un compte" */
+.login-link a {
+    font-weight: 600;
+}

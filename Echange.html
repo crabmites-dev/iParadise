@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Échange & Passez à l'iPhone Suivant - iParadise</title>
+    <link rel="stylesheet" href="echange.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-left">
+            <a href="#" class="logo" title="iParadise"><i class="fa-brands fa-apple"></i></a> <nav>
+                <ul>
+                    <li><a href="Boutique.html">Accueil</a></li>
+                    <li><a href="Produit3.html">Produits</a></li>
+                    <li><a href="Echange.html">Échanger</a></li>
+                    <li><a href="Reparer.html">Réparer</a></li> 
+                    <li><a href="Accessoire.html">Accessoires</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="nav-right">
+            <a href="#" class="icon search"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#" class="icon cart"><i class="fa-solid fa-basket-shopping"></i></a>
+            <a href="Connection.html" class="btn-connexion">Connexion</a>
+        </div>
+    </header>
+
+    <section class="trade-in-section-v2">
+        <div class="header-content">
+            <h1 class="main-title-v2">Échangez votre iPhone actuel</h1>
+            <p class="section-subtitle-v2">
+                Obtenez le meilleur prix pour votre ancien appareil et faites le saut vers la dernière innovation Apple.
+            </p>
+        </div>
+
+        <form id="tradeInFormV2" class="trade-in-form-v2">
+
+            <div class="form-card">
+                <label class="card-title"><i class="fas fa-mobile-alt"></i> État Esthétique</label>
+                <p class="card-description">Comment décririez-vous l'apparence générale de votre iPhone actuel ?</p>
+                <div class="option-grid">
+                    <input type="radio" id="etat100" name="etatActuel" value="100" required>
+                    <label for="etat100" class="option-label">
+                        <i class="fas fa-star"></i> Excellent
+                        <span>(Comme neuf, aucune trace)</span>
+                    </label>
+
+                    <input type="radio" id="etat80" name="etatActuel" value="80">
+                    <label for="etat80" class="option-label">
+                        <i class="fas fa-check-circle"></i> Très Bon
+                        <span>(Quelques micro-rayures)</span>
+                    </label>
+
+                    <input type="radio" id="etat60" name="etatActuel" value="60">
+                    <label for="etat60" class="option-label">
+                        <i class="fas fa-minus-circle"></i> Bon
+                        <span>(Rayures, usure modérée)</span>
+                    </label>
+
+                    <input type="radio" id="etat40" name="etatActuel" value="40">
+                    <label for="etat40" class="option-label">
+                        <i class="fas fa-times-circle"></i> Moyen
+                        <span>(Fortes traces, chocs légers)</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-card">
+                <label class="card-title"><i class="fas fa-heart-broken"></i> Dommages Physiques</label>
+                <p class="card-description">L'iPhone présente-t-il des dommages majeurs (écran/dos cassé) ou un écran non original ?</p>
+                
+                <div class="damage-options">
+                    <div class="radio-toggle">
+                        <input type="radio" id="ecranCasseOui" name="ecranCasse" value="oui" required>
+                        <label for="ecranCasseOui">Écran cassé</label>
+                        <input type="radio" id="ecranCasseNon" name="ecranCasse" value="non">
+                        <label for="ecranCasseNon">Écran intact</label>
+                    </div>
+
+                    <div class="radio-toggle">
+                        <input type="radio" id="dosCasseOui" name="dosCasse" value="oui" required>
+                        <label for="dosCasseOui">Dos cassé</label>
+                        <input type="radio" id="dosCasseNon" name="dosCasse" value="non">
+                        <label for="dosCasseNon">Dos intact</label>
+                    </div>
+
+                    
+                </div>
+            </div>
+
+            <div class="form-card">
+                <label class="card-title"><i class="fas fa-battery-full"></i> État de la Batterie</label>
+                <p class="card-description">Quel est le pourcentage de santé maximum de votre batterie ?</p>
+                <div class="option-grid">
+                    <input type="radio" id="bat100" name="etatBatterie" value="100" required>
+                    <label for="bat100" class="option-label">
+                        <i class="fas fa-battery-full"></i> 90-100%
+                        <span>(Excellente autonomie)</span>
+                    </label>
+
+                    <input type="radio" id="bat80" name="etatBatterie" value="80">
+                    <label for="bat80" class="option-label">
+                        <i class="fas fa-battery-three-quarters"></i> 75-89%
+                        <span>(Très bonne autonomie)</span>
+                    </label>
+
+                    <input type="radio" id="bat60" name="etatBatterie" value="60">
+                    <label for="bat60" class="option-label">
+                        <i class="fas fa-battery-half"></i> 60-74%
+                        <span>(Autonomie moyenne)</span>
+                    </label>
+
+                    <input type="radio" id="bat40" name="etatBatterie" value="40">
+                    <label for="bat40" class="option-label">
+                        <i class="fas fa-battery-empty"></i> Moins de 60%
+                        <span>(Autonomie faible)</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-card last-card">
+                <label for="iphoneSouhaiteV2" class="card-title"><i class="fas fa-gift"></i> Votre Prochain iPhone</label>
+                <p class="card-description">Quel modèle souhaitez-vous acquérir en échange de votre ancien appareil ?</p>
+                <select id="iphoneSouhaiteV2" required>
+                    <option value="" disabled selected> Choisissez votre nouvel iPhone </option>
+                    <option value="iphone17promax">iPhone 17 Pro Max</option>
+                    <option value="iphone17pro">iPhone 17 Pro</option>
+                    <option value="iphone17air">iPhone 17 Air</option>
+                    <option value="iphone17">iPhone 17</option>
+                    <option value="iphone16promax">iPhone 16 Pro Max</option>
+                    <option value="iphone16pro">iPhone 16 Pro</option>
+                    <option value="iphone16">iPhone 16</option>
+                    <option value="iphone15promax">iPhone 15 Pro Max</option>
+                    <option value="iphone15pro">iPhone 15 Pro</option>
+                    <option value="iphone15">iPhone 15</option>
+                    <option value="iphone14promax">iPhone 14 Pro Max</option>
+                    <option value="iphone14pro">iPhone 14 Pro</option>
+                    <option value="iphone14">iPhone 14</option>
+                    <option value="iphone13promax">iPhone 13 Pro Max</option>
+                </select>
+            </div>
+
+            <button type="submit" class="submit-btn-v2">Estimer mon Échange</button>
+
+            <div id="resultSectionV2" class="result-box-v2">
+                <div class="result-icon"><i class="fas fa-tag"></i></div>
+                <p class="result-message-v2">
+                    Votre devis d'échange :
+                </p>
+                <p id="resultTextV2" class="result-text-v2">
+                    Calcul en cours...
+                </p>
+                <button class="call-to-action-btn">Commencer l'échange</button>
+            </div>
+
+        </form>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+/* Fichier: style.css */
+
+/* Reset et Police */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4; /* Fond gris très clair */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Conteneur principal (la carte blanche) */
+.login-container { 
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Titres */
+.icon-large {
+    font-size: 40px;
+    color: #007aff; /* Couleur bleue (similaire au style Apple) */
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* Groupes d'entrée (icône + champ) */
+.input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0 10px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s;
+}
+
+.input-group:focus-within {
+    border-color: #007aff; /* Changement de couleur au focus */
+    box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.2);
+}
+
+.input-group i {
+    color: #888;
+    margin-right: 10px;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    padding: 12px 0;
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+/* Bouton principal (Inscription) */
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background-color: #007aff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #005bb5; /* Bleu plus foncé au survol */
+}
+
+/* Pied de page et liens */
+.footer-links {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.footer-links a {
+    color: #007aff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
